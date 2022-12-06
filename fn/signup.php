@@ -3,15 +3,27 @@
     <section class="py-4 py-md-5 my-5">
         <div class="container py-md-5">
             <div class="row">
-                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/login.svg"></div>
+                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/register.svg"></div>
                 <div class="col-md-5 col-xl-4 text-center text-md-start">
-                    <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br></span></h2>
-                    <form method="post">
-                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" id="email" placeholder="Email"></div>
-                        <div class="mb-3"><input class="shadow form-control" type="password" name="password" id="password" placeholder="Senha"></div>
-                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit" name="entrar" id="entrar">Login</button></div>
+                    <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1">Faça seu cadastro!<br></span></h2>
+                    <form method="get" action="action_add_cliente.php">
+                        <div class="mb-3"><input class="shadow-sm form-control" type="email" name="txtemail" id="txtemail" placeholder="Email"></div>
+                        <div class="mb-3"><input class="shadow-sm form-control" type="password" name="txtsenha" id="txtsenha" placeholder="Senha"></div>
+                        <div class="mb-3"><input class="shadow-sm form-control" type="password" name="txtcnfsenha" id="txtcnfsenha" placeholder="Repita a senha"></div>
+                        <div class="mb-3"><input class="form-control" type="text" name="txtnome" id="txtnome" placeholder="Nome"></div>
+                        <div class="mb-3"><input class="form-control" type="text" placeholder="Sobrenome" name="txtsobrenome" id="txtnome"></div>
+                        <div class="mb-3"><input class="form-control" type="number" name="txtcpf" id="txtcpf" placeholder="CPF"></div>
+                        <div class="mb-3"><input class="form-control" type="tel" name="txtfone" id="txtfone" placeholder="Telefone"></div>
+                        <div class="mb-3"><input class="form-control" type="text" name="txtendereco" id="txtendereco" placeholder="Endereço (Rua, bairro e número)"></div>
+                        <div class="mb-3"><input class="form-control" type="date" name="txtdatanasc"></div>
+                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit" name="btncadastrar" id="btncadastrar">Finalizar cadastro</button></div>
 
-                        <p class="text-muted"><a href="forgotten-password.php">Esqueceu sua senha?</a></p>
+                        <p class="text-muted">Já possui um cadastro? <a href="login.php">Faça Login&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <line x1="15" y1="16" x2="19" y2="12"></line>
+                                    <line x1="15" y1="8" x2="19" y2="12"></line>
+                                </svg></a>&nbsp;</p>
                     </form>
                 </div>
             </div>

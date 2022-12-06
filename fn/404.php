@@ -1,38 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require_once 'cabecalho.php' ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Forgotten Password - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>Electrify</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Cadastrar-se</a></li>
-                    <li class="nav-item"></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="carrinho.html">Carrinho de compras</a>
-            </div>
-        </div>
-    </nav>
-    <section class="py-4 py-md-5 mt-5">
-        <div class="container py-md-5">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/desk.svg"></div>
-                <div class="col-md-5 col-xl-4 text-center text-md-start">
-                    <h2 class="display-6 fw-bold mb-4">Esqueceu sua senha?</h2>
-                    <p class="text-muted">Insira o Email associado com sua conta:</p>
-                    <form method="post">
-                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" placeholder="Email"></div>
-                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Alterar senha</button></div>
-                    </form>
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row row-cols-1 d-flex justify-content-center align-items-center">
+                <div class="col-md-10 text-center"><img class="img-fluid w-100" src="illustrations/404.svg"></div>
+                <div class="col text-center">
+                    <h2 class="display-3 fw-bold mb-4">Página não encontrada...</h2>
+                    <p class="fs-4 text-muted">Parece que você tentou acessar uma página que não existe. Confira a URL e tente novamente!</p>
                 </div>
             </div>
         </div>

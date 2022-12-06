@@ -1,38 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require_once 'cabecalho.php' ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Page Not Found - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span>Electrify</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="signup.html">Cadastrar-se</a></li>
-                    <li class="nav-item"></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="carrinho.html">Carrinho de compras</a>
-            </div>
-        </div>
-    </nav>
-    <section class="py-5 mt-5">
-        <div class="container">
-            <div class="row row-cols-1 d-flex justify-content-center align-items-center">
-                <div class="col-md-10 text-center"><img class="img-fluid w-100" src="illustrations/404.svg"></div>
-                <div class="col text-center">
-                    <h2 class="display-3 fw-bold mb-4">Página não encontrada...</h2>
-                    <p class="fs-4 text-muted">Parece que você tentou acessar uma página que não existe. Confira a URL e tente novamente!</p>
+    <header class="pt-5">
+        <div class="container pt-4 pt-xl-5">
+            <div class="row pt-5">
+                <div class="col-md-8 text-center text-md-start mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 fw-bold mb-5">Seu cadastro foi concluído na&nbsp;<span class="underline">Electrify</span>!</h1>
+                        <p class="fs-5 text-muted mb-5">Todos os produtos eletrônicos do mercado em uma loja só!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-10 mx-auto">
+                    <div class="text-center position-relative"></div>
                 </div>
             </div>
         </div>
+    </header>
+    <section>
+        <div class="container py-4 py-xl-5"><a class="btn btn-primary text-start shadow d-xl-flex justify-content-xl-center" role="button" href="index.php">IR PARA A PÁGINA INCIAL</a></div>
     </section>
+    <section></section>
     <footer>
         <div class="container py-4 py-lg-5">
             <div class="row row-cols-2 row-cols-md-4">
@@ -59,7 +45,7 @@
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/startup-modern.js"></script>
 </body>
 
 </html>
