@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Page Not Found - Brand</title>
+    <title>Log in - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -15,20 +15,31 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.html">Entrar</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Cadastrar-se</a></li>
                     <li class="nav-item"></li>
                 </ul><a class="btn btn-primary shadow" role="button" href="carrinho.html">Carrinho de compras</a>
             </div>
         </div>
     </nav>
-    <section class="py-5 mt-5">
-        <div class="container">
-            <div class="row row-cols-1 d-flex justify-content-center align-items-center">
-                <div class="col-md-10 text-center"><img class="img-fluid w-100" src="illustrations/404.svg"></div>
-                <div class="col text-center">
-                    <h2 class="display-3 fw-bold mb-4">Página não encontrada...</h2>
-                    <p class="fs-4 text-muted">Parece que você tentou acessar uma página que não existe. Confira a URL e tente novamente!</p>
+    <section class="py-4 py-md-5 my-5">
+        <div class="container py-md-5">
+            <div class="row">
+                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/login.svg"></div>
+                <div class="col-md-5 col-xl-4 text-center text-md-start">
+                    <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br></span></h2>
+                    <?php
+                    
+                        if ($usuario == NULL || $senha == NULL || $usuario != $db_usuario || $senha != $db_senha) {
+                            echo "<small class='form-text' style='color: var(--bs-red);font-weight: bold;'>Usuário ou senha incorretos!</small>";
+                        }
+                    ?>
+                    <form method="post">
+                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" placeholder="Email"></div>
+                        <div class="mb-3"><input class="shadow form-control" type="password" name="password" placeholder="Senha"></div>
+                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Log in</button></div>
+                        <p class="text-muted"><a href="forgotten-password.html">Esqueceu sua senha?</a></p>
+                    </form>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Log in - Brand</title>
+    <title>Sign up - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
@@ -15,24 +15,28 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="login.html">Entrar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.html">Cadastrar-se</a></li>
                     <li class="nav-item"></li>
-                </ul><a class="btn btn-primary shadow" role="button" href="signup.html">Carrinho de compras</a>
+                </ul><a class="btn btn-primary shadow" role="button" href="carrinho.html">Carrinho de compras</a>
             </div>
         </div>
     </nav>
     <section class="py-4 py-md-5 my-5">
         <div class="container py-md-5">
             <div class="row">
-                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/login.svg"></div>
-                <div class="col-md-5 col-xl-4 text-center text-md-start">
-                    <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br></span></h2>
-                    <form method="post">
-                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" placeholder="Email"></div>
-                        <div class="mb-3"><input class="shadow form-control" type="password" name="password" placeholder="Senha"></div>
-                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Log in</button></div>
-                        <p class="text-muted"><a href="forgotten-password.html">Esqueceu sua senha?</a></p>
+                <div class="col-md-5 col-lg-12 col-xl-4 text-center text-md-start">
+                    <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Informações pessoais</strong></span></h2>
+                    <form method="get" action="action_add_cliente.php">
+                        <fieldset>
+                            <div class="mb-3"><input class="form-control" type="text" name="txtnome" id="txtnome" placeholder="Nome"></div>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="Sobrenome" name="txtsobrenome" id="txtnome"></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="txtcpf" id="txtcpf" placeholder="CPF"></div>
+                            <div class="mb-3"><input class="form-control" type="tel" name="txtfone" id="txtfone" placeholder="Telefone"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="txtendereco" id="txtendereco" placeholder="Endereço (Rua, bairro e número)"></div>
+                            <div class="mb-3"><input class="form-control" type="date" name="txtdatanasc"></div>
+                            <div class="mb-5"><button class="btn btn-primary shadow" type="submit" name="btncadastrar" id="btncadastrar">Finalizar cadastro</button></div>
+                        </fieldset>
                     </form>
                 </div>
             </div>
