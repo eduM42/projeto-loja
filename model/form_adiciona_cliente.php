@@ -10,7 +10,7 @@
 
 <body>
     <div class="box">
-        <form action="action_adiciona_cliente.php">
+        <form method="POST" action="action_adiciona_cliente.php">
             <fieldset>
                 <legend><b>Formulário de Clientes</b></legend>
                 <br>
@@ -31,10 +31,10 @@
 
                 <div class="inputBox">
                     <label for="nome"><b>Data de Nascimento</b></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>                    
+                    <input type="date" name="data_nascimento" id="txtdatanasc" class="inputUser" required>                    
                 </div>
 
-                <input type="submit" name="submit" id="submit">
+                <button type="submit" name="btncadastrar" class="btn" id="btncadastrar">Adicionar</button>
 
             </fieldset>
     </form>
