@@ -24,6 +24,7 @@
                         //}
                     ?>
                     <li class="nav-item"><a class="nav-link" href="signup.php">Cadastrar-se</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagem_clientes.php">Lista de clientes</a></li>
                     <li class="nav-item"></li>
                 </ul><a class="btn btn-primary shadow" role="button" href="carrinho.php">Carrinho de compras</a>
             </div>

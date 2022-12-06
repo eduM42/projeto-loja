@@ -22,7 +22,7 @@
       $sql->bindValue(':cpf', $cpf);
       $sql->bindValue(':end', $endereco);
       $sql->execute();
-      header('Location: confirm.html');
+      header('Location: confirm.php');
    }
    echo "$nome $sobrenome $data $fone, $cpf, $endereco";
 
