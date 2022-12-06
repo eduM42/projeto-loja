@@ -16,12 +16,12 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <?php
-                        $login = $_COOKIE['login'];
-                        if(isset($login)){
-                            echo "<h2 style='color: var(--bs-orange);'>Olá, $login</h2>";
-                        }else{
+                        //$login = $_COOKIE['login'];
+                        //if(isset($login)){
+                            //echo "<h2 style='color: var(--bs-orange);'>Olá, Eduardo</h2>";
+                        //}else{
                             echo "<li class='nav-item'><a class='nav-link' href='login.php'>Entrar</a></li>";
-                        }
+                        //}
                     ?>
                     <li class="nav-item"><a class="nav-link" href="signup.php">Cadastrar-se</a></li>
                     <li class="nav-item"></li>
