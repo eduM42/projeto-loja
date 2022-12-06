@@ -34,14 +34,14 @@
                             </tr>
                                 <?php
                                     while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
-                                        echo "<tr><th>{$linha['cli_id']}</th>";
-                                        echo "<th style='margin:5px'>{$linha['cli_nome']}</th>";
-                                        echo "<th>{$linha['cli_sobrenome']}</th>";
-                                        echo "<th>{$linha['cli_email']}</th>";
-                                        echo "<th>{$linha['cli_cpf']}</th>";
-                                        echo "<th>{$linha['cli_fone']}</th>";
-                                        echo "<th>{$linha['cli_data_nasc']}</th>";
-                                        echo "<th><a class='btn btn-danger' role='button' href='action_exclui_cliente.php?id={$linha['cli_id']}'>Excluir cadastro</a></th>";
+                                        echo "<tr><td>{$linha['cli_id']}</td>";
+                                        echo "<td style='margin:5px'>{$linha['cli_nome']}</td>";
+                                        echo "<td>{$linha['cli_sobrenome']}</td>";
+                                        echo "<td>{$linha['cli_email']}</td>";
+                                        echo "<td>{$linha['cli_cpf']}</td>";
+                                        echo "<td>{$linha['cli_fone']}</td>";
+                                        echo "<td>{$linha['cli_data_nasc']}</td>";
+                                        echo "<td><a class='btn btn-danger' role='button' href='action_exclui_cliente.php?id={$linha['cli_id']}'>Excluir cadastro</a></th>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";

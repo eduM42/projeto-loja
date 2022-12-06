@@ -7,6 +7,16 @@
     <title>Forgotten Password - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th{
+            border: 2px solid #ddd;
+            padding: 8px;
+        }
+    </style>
 </head>
 
 <body>
