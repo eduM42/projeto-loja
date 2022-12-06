@@ -27,14 +27,14 @@
             <div class="row">
                 <div class="col-md-5 col-lg-12 col-xl-4 text-center text-md-start">
                     <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Informações pessoais</strong></span></h2>
-                    <form method="post">
+                    <form method="post" action="action_add_cliente.php">
                         <div class="mb-3"><input class="form-control" type="text" name="txtnome" id="txtnome" placeholder="Nome"></div>
                         <div class="mb-3"><input class="form-control" type="text" placeholder="Sobrenome" name="txtsobrenome" id="txtnome"></div>
-                        <div class="mb-3"><input class="form-control" type="number" name="txtcpf" id="txtnome" placeholder="CPF"></div>
-                        <div class="mb-3"><input class="form-control" type="tel" name="txtfone" id="txtnome" placeholder="Telefone"></div>
-                        <div class="mb-3"><input class="form-control" type="text" name="txtendereco" id="txtnome" placeholder="Endereço (Rua, bairro e número)"></div>
+                        <div class="mb-3"><input class="form-control" type="number" name="txtcpf" id="txtcpf" placeholder="CPF"></div>
+                        <div class="mb-3"><input class="form-control" type="tel" name="txtfone" id="txtfone" placeholder="Telefone"></div>
+                        <div class="mb-3"><input class="form-control" type="text" name="txtendereco" id="txtendereco" placeholder="Endereço (Rua, bairro e número)"></div>
                         <div class="mb-3"><input class="form-control" type="date" name="txtdatanasc"></div>
-                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Finalizar cadastro</button></div>
+                        <div class="mb-5"><input class="btn btn-primary shadow" type="submit" name="submit" value="Finalizar cadastro"></input></div>
                     </form>
                 </div>
             </div>
