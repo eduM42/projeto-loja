@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Entrar</a></li>
                     <li class="nav-item"><a class="nav-link active" href="signup.html">Cadastrar-se</a></li>
                     <li class="nav-item"></li>
                 </ul><a class="btn btn-primary shadow" role="button" href="carrinho.html">Carrinho de compras</a>
@@ -28,7 +28,7 @@
                 <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/register.svg"></div>
                 <div class="col-md-5 col-xl-4 text-center text-md-start">
                     <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1">Faça seu cadastro!<br></span></h2>
-                    <form method="get" action="add_cliente_form.html">
+                    <form method="get" action="action_add_cliente.php">
                         <div class="mb-3"><input class="shadow-sm form-control" type="email" name="txtemail" id="txtemail" placeholder="Email"></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="password" name="txtsenha" id="txtsenha" placeholder="Senha"></div>
                         <div class="mb-3"><input class="shadow-sm form-control" type="password" name="txtcnfsenha" id="txtcnfsenha" placeholder="Repita a senha"></div>
@@ -38,7 +38,8 @@
                         <div class="mb-3"><input class="form-control" type="tel" name="txtfone" id="txtfone" placeholder="Telefone"></div>
                         <div class="mb-3"><input class="form-control" type="text" name="txtendereco" id="txtendereco" placeholder="Endereço (Rua, bairro e número)"></div>
                         <div class="mb-3"><input class="form-control" type="date" name="txtdatanasc"></div>
-                        <div class="mb-5"><input class="btn btn-primary shadow" type="submit" name="submit" role="button" value="Criar conta" href="action_cliente_form.php"></input></div>
+                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit" name="btncadastrar" id="btncadastrar">Finalizar cadastro</button></div>
+
                         <p class="text-muted">Já possui um cadastro? <a href="login.html">Faça Login&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-narrow-right">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <line x1="5" y1="12" x2="19" y2="12"></line>

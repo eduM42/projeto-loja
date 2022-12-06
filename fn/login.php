@@ -29,7 +29,6 @@
                 <div class="col-md-5 col-xl-4 text-center text-md-start">
                     <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br></span></h2>
                     <?php
-                    
                         if ($usuario == NULL || $senha == NULL || $usuario != $db_usuario || $senha != $db_senha) {
                             echo "<small class='form-text' style='color: var(--bs-red);font-weight: bold;'>Usuário ou senha incorretos!</small>";
                         }
