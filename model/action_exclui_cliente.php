@@ -2,7 +2,7 @@
     include_once 'cabecalho.php';
     require_once 'conexao.php';
 
-    $codigo=$_POST['id'];
+    $codigo=$_GET['id'];
 
     $exclui=$conecta->prepare('DELETE FROM tab_clientes WHERE cli_id=:codigo');
     $exclui->bindValue(':codigo', $codigo);
