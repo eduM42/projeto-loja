@@ -31,7 +31,7 @@
 
                 <div class="inputBox">
                     <label for="nome"><b>Data de Nascimento</b></label>
-                    <input type="date" name="data_nascimento" id="txtdatanasc" class="inputUser" required>                    
+                    <input type="date" name="txtdatanasc" id="txtdatanasc" class="inputUser" required>                    
                 </div>
 
                 <button type="submit" name="btncadastrar" class="btn" id="btncadastrar">Adicionar</button>
