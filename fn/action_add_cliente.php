@@ -1,5 +1,5 @@
 <?php
-   require_once 'conexao.php';
+   require_once 'connect.php';
 
    if(isset($_POST['btncadastrar'])){
       $nome = filter_input(INPUT_POST,'txtnome');
