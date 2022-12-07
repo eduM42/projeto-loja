@@ -11,12 +11,9 @@
                 </div>
                 <div class="col-12 col-lg-10 mx-auto">
                 <?php
-                        include_once 'cabecalho.php';
-                        require_once 'connect.php';
-
-                        $consulta = $conecta -> prepare('SELECT * FROM tab_clientes');
-                        $consulta -> execute();
-                    ?>
+                    include_once 'cabecalho.php';
+                    require_once 'connect.php';
+                ?>
 
                     </head>
                     <body>
@@ -33,6 +30,13 @@
                                 <th colspan="2">Ações</th>
                             </tr>
                                 <?php
+                                    if($_COOKIE['usuario'] == 'super'){
+                                        $consulta = $conecta -> prepare('SELECT * FROM tab_clientes');
+                                        $consulta -> execute();
+                                    }else{
+                                        $consulta = $conecta -> prepare("SELECT * FROM tab_clientes WHERE cli_nome = '".$_COOKIE['usuario']."'");
+                                        $consulta -> execute();
+                                    }
                                     while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
                                         echo "<tr><td>{$linha['cli_id']}</td>";
                                         echo "<td style='margin:5px'>{$linha['cli_nome']}</td>";

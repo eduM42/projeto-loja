@@ -9,7 +9,7 @@
     
     $sql = $conecta->query("select * from tab_clientes WHERE cli_email = '".$usuario."' and cli_senha = '".$senha."'");
     
-    $consulta = $conecta -> prepare('SELECT * FROM tab_clientes');
+    $consulta = $conecta -> prepare("SELECT * FROM tab_clientes WHERE cli_email = '".$usuario."'");
     $consulta -> execute();
     while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
       $nome = $linha['cli_nome'];
@@ -30,5 +30,4 @@
     }else{
       echo "ERRO";
     }
-
 ?>
