@@ -21,8 +21,8 @@
 
     if ($usuario == NULL || $senha == NULL || $usuario != $db_usuario || $senha != $db_senha) {
         echo "ACESSO NEGADO";
+        $_SESSION['fail'] == TRUE;
         header("Location: login.php");
-        unset($_COOKIE['login']);
     }else if($usuario == $db_usuario && $senha == $db_senha){
         setcookie('login', TRUE, time()+3600);
         setcookie('usuario', $nome, time()+3600);

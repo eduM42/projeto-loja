@@ -1,8 +1,14 @@
 <?php
+    session_start();
     require_once 'cabecalho.php';
     if($_COOKIE['login'] == TRUE){
         header("Location: index.php");
-    }    
+    }else if($_SESSION['fail'] == TRUE){
+        echo '<script type="text/javascript">
+            window.onload = function () { alert("Falha no login. Usuário ou senha incorretos!"); } 
+        </script>';
+        $_SESSION['fail'] = FALSE;
+    }
 ?>
 
     <section class="py-4 py-md-5 my-5">
