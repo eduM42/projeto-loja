@@ -6,9 +6,9 @@
                 <div class="col-md-6 text-center"><img class="img-fluid w-100" src="illustrations/login.svg"></div>
                 <div class="col-md-5 col-xl-4 text-center text-md-start">
                     <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br></span></h2>
-                    <form method="post">
-                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" id="email" placeholder="Email"></div>
-                        <div class="mb-3"><input class="shadow form-control" type="password" name="password" id="password" placeholder="Senha"></div>
+                    <form method="POST" action="action_login.php">
+                        <div class="mb-3"><input class="shadow form-control" type="email" name="txtusuario" id="txtusuario" placeholder="Email"></div>
+                        <div class="mb-3"><input class="shadow form-control" type="password" name="txtsenha" id="txtsenha" placeholder="Senha"></div>
                         <div class="mb-5"><button class="btn btn-primary shadow" type="submit" name="entrar" id="entrar">Login</button></div>
 
                         <p class="text-muted"><a href="forgotten-password.php">Esqueceu sua senha?</a></p>

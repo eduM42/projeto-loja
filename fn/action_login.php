@@ -1,21 +1,25 @@
 <?php
-$login = $_GET['login'];
-$entrar = $_GET['entrar'];
-$senha = md5($_GET['password']);
-$connect = mysql_connect('nome_do_servidor','nome_de_usuario','senha');
-$db = mysql_select_db('nome_do_banco_de_dados');
-  if (isset($entrar)) {
+    session_start();
 
-    $verifica = mysql_query("SELECT * FROM tab_clientes WHERE cli_email =
-    '$login' AND cli_senha = '$senha'") or die("erro ao selecionar");
-      if (mysql_num_rows($verifica)<=0){
-        echo"<script language='javascript' type='text/javascript'>
-        alert('Login e/ou senha incorretos');window.location
-        .href='login.php';</script>";
-        die();
-      }else{
-        setcookie("login",$login, time() + 3600);
-        header("Location:index.php");
-      }
-  }
+    include_once 'connect.php';
+
+    $usuario = $_POST['txtusuario'];
+    $senha = $_POST['txtsenha'];
+    
+    $sql = $conecta->query("select * from tab_clientes WHERE cli_email = '".$usuario."' and cli_senha = '".$senha."'");
+    foreach($sql as $linha){
+      $db_usuario = $linha['cli_email'];
+      $db_senha = $linha['cli_senha'];
+    }
+
+    if ($usuario == NULL || $senha == NULL || $usuario != $db_usuario || $senha != $db_senha) {
+        echo "ACESSO NEGADO";
+        header("Location: login.php");
+    }else if($usuario == $db_usuario && $senha == $db_senha){
+        $_SESSION['usuario'] = $usuario;
+        header("Location: index.php");
+    }else{
+      echo "ERRO";
+    }
+
 ?>
