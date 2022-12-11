@@ -90,7 +90,10 @@
                                                 <h2 class="fw-bold text-white mb-3">Notebook Lenovo IdeadPad Gaming 3i</h2>
                                                 <p class="mb-4">Notebook Lenovo de alto desempenho e com uma excelente construção, tela, processador e placa de vídeo</p>
                                                 <h1 style="color: rgb(0,200,0);">R$ 4.759,99</h1>
-                                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">Comprar já!</a><a class="btn btn-light btn-lg" role="button" href="#">Carrinho</a></div>
+                                                <?php
+                                                $email = $_COOKIE['email'];
+                                                echo "<div class='my-3'><a class='btn btn-primary btn-lg me-2' role='button' href='action_compra.php?email=$email&prod=1'>Comprar já!</a><a class='btn btn-light btn-lg' role='button' href='#'>Carrinho</a></div>"
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/notebook.webp"></div>
@@ -107,7 +110,10 @@
                                                 <h2 class="fw-bold text-white mb-3">Teclado e Mouse Logitech MK235</h2>
                                                 <p class="mb-4">Tecnologia sem fio em um pacote completo de teclado e mouse, nunca mais sinta-se preso ao seu dispositivo ou sofra com qualquer desconforto!</p>
                                                 <h1 style="color: rgb(0,200,0);">R$ 169,90</h1>
-                                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">Comprar já!</a><a class="btn btn-light btn-lg" role="button" href="#">Carrinho</a></div>
+                                                <?php
+                                                $email = $_COOKIE['email'];
+                                                echo "<div class='my-3'><a class='btn btn-primary btn-lg me-2' role='button' href='action_compra.php?email=$email&prod=2'>Comprar já!</a><a class='btn btn-light btn-lg' role='button' href='#'>Carrinho</a></div>"
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/teclado.jpg"></div>
@@ -124,7 +130,10 @@
                                                 <h2 class="fw-bold text-white mb-3">Samsung Galaxy Buds 2 Pro</h2>
                                                 <p class="mb-4">Qualidade de som impecável e conforto inimaginável, atrelados a uma bateria de longa duração. Nunca fique sem suas músicas!</p>
                                                 <h1 style="color: rgb(0,200,0);">R$ 1.499,99</h1>
-                                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">Comprar já!</a><a class="btn btn-light btn-lg" role="button" href="#">Carrinho</a></div>
+                                                <?php
+                                                $email = $_COOKIE['email'];
+                                                echo "<div class='my-3'><a class='btn btn-primary btn-lg me-2' role='button' href='action_compra.php?email=$email&prod=3'>Comprar já!</a><a class='btn btn-light btn-lg' role='button' href='#'>Carrinho</a></div>"
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/fone.png"></div>
@@ -141,7 +150,10 @@
                                                 <h2 class="fw-bold text-white mb-3">Monitor Samsung Odyssey 49"</h2>
                                                 <p class="mb-4">O melhor display do mundo, sem comparações. Para a melhor qualidade de imagem, melhor fluidez, uso mais fácil, não há outra alternativa.</p>
                                                 <h1 style="color: rgb(0,200,0);">R$ 11.399,99</h1>
-                                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="#">Comprar já!</a><a class="btn btn-light btn-lg" role="button" href="#">Carrinho</a></div>
+                                                <?php
+                                                $email = $_COOKIE['email'];
+                                                echo "<div class='my-3'><a class='btn btn-primary btn-lg me-2' role='button' href='action_compra.php?email=$email&prod=4'>Comprar já!</a><a class='btn btn-light btn-lg' role='button' href='#'>Carrinho</a></div>"
+                                                ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-cover" src="assets/img/monitor.jpeg"></div>
