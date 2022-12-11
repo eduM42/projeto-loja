@@ -57,7 +57,7 @@
                                                             <h2 class='fw-bold text-white mb-3'>$prod_nome</h2>
                                                             <p class='mb-4'>$prod_desc</p>
                                                             <h1 style='color: rgb(0,200,0);'>R$ $prod_valor</h1>
-                                                            <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php?email=$usuario'>CONFIRMAR COMPRA</a></div>
+                                                            <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='confirma.php?email=$usuario'>CONFIRMAR COMPRA</a></div>
                                                         </div>
                                                     </div>
                                                     <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div>";
