@@ -1,3 +1,10 @@
+<?php
+    require_once 'cabecalho.php';
+    if($_COOKIE['login'] == FALSE){
+        header('Location: index.php');
+    }
+?>
+
 <?php require_once 'cabecalho.php' ?>
     <section class="py-4 py-md-5 mt-5">
         <div class="container py-md-5">

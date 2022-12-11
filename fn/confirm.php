@@ -1,3 +1,10 @@
+<?php
+    require_once 'cabecalho.php';
+    if($_COOKIE['login'] == FALSE){
+        header('Location: index.php');
+    }
+?>
+
 <?php require_once 'cabecalho.php' ?>
 
     <header class="pt-5">
