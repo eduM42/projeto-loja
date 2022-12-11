@@ -30,16 +30,17 @@
         <div class="container">
             <div class="bg-primary border rounded border-0 border-primary overflow-hidden">
                 <div class="row g-0">
-                    <div class="text-white p-4 p-md-5">
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <div class="text-white p-4 p-md-5">
                             <h2 class="fw-bold text-white mb-3">COMPRA FINALIZDA!</h2>
                             <p class="mb-4">Sua compra foi finalizada com sucesso e provavelmente não chegará nunca, afinal de contas, essa loja não existe de verdade!</p><a class="btn btn-success" role="button">IR PARA A PÁGINA INICIAL</a>
                         </div>
-                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg"></div>
+                    </div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg" /></div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5"></section>
     <footer>
         <div class="container py-4 py-lg-5">
             <div class="row row-cols-2 row-cols-md-4">
