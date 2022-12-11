@@ -11,7 +11,7 @@
         echo $cli_id;
     }
     
-    $exclui=$conecta->prepare('DELETE FROM tab_carrinho WHERE cli_id=:codigo');
+    $exclui=$conecta->prepare('DELETE FROM `tab_carrinho` WHERE `tab_carrinho`.`cart_id` = :codigo');
     $exclui->bindValue(':codigo', $codigo);
     $exclui->execute();
     
