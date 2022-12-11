@@ -41,6 +41,11 @@
                                                  $consulta = $conecta -> prepare("SELECT * FROM tab_carrinho WHERE cli_id = '".$cli_id."'");
                                                  $consulta -> execute();
                                                  while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                                                    $prod_id = $linha['prod_id'];
+                                                 }
+
+                                                 $consulta = $conecta -> prepare("SELECT * FROM tab_produtos WHERE prod_id = '".$prod_id."'");
+                                                 while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
                                                     $prod_nome = $linha['prod_nome'];
                                                     $prod_desc = $linha['prod_desc'];
                                                     $prod_img = $linha['prod_img'];
