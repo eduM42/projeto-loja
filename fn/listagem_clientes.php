@@ -37,10 +37,17 @@
                                 <th colspan="2">Ações</th>
                             </tr>
                                 <?php
-                                    if($_COOKIE['usuario'] == 'super'){
+                                    $usuario = $_COOKIE['email'];
+
+                                    $consulta = $conecta -> prepare("SELECT * FROM tab_clientes WHERE cli_email = '".$usuario."'");
+                                    $consulta -> execute();
+                                    while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                                        $cli_perm = $linha['cli_permissao'];
+                                    }
+                                    if($cli_perm == 1){
                                         $consulta = $conecta -> prepare('SELECT * FROM tab_clientes');
                                         $consulta -> execute();
-                                    }else{
+                                    }else if($cli_perm == 0){
                                         $consulta = $conecta -> prepare("SELECT * FROM tab_clientes WHERE cli_nome = '".$_COOKIE['usuario']."'");
                                         $consulta -> execute();
                                     }
