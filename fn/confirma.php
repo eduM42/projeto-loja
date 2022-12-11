@@ -11,8 +11,9 @@
         echo $cli_id;
     }
     
-    $sql = $conecta->prepare("DELETE FROM tab_carrinho WHERE='".$cli_id."'");
-    $sql->execute();
+    $exclui=$conecta->prepare('DELETE FROM tab_carrinho WHERE cli_id=:codigo');
+    $exclui->bindValue(':codigo', $codigo);
+    $exclui->execute();
     
     header('Location: index.php');
 ?>
