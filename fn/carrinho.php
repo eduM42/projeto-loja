@@ -37,12 +37,11 @@
                                             $consulta -> execute();
                                             while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
                                                 $cli_id = $linha['cli_id'];
-                                            //}
-                                                $consulta = $conecta -> prepare("SELECT * FROM tab_carrinho WHERE cli_id = '".$cli_id."'");
-                                                $consulta -> execute();
-                                                while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
-                                                    $prod_id = $linha['prod_id'];
-                                                }
+                                            }
+                                            $consulta = $conecta -> prepare("SELECT * FROM tab_carrinho WHERE cli_id = '".$cli_id."'");
+                                            $consulta -> execute();
+                                            while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                                                $prod_id = $linha['prod_id'];
 
                                                 $consulta = $conecta -> prepare("SELECT * FROM tab_produtos WHERE prod_id = '".$prod_id."'");
                                                 $consulta -> execute();
@@ -61,7 +60,7 @@
                                                             <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php'>CONFIRMAR COMPRA</a></div>
                                                         </div>
                                                     </div>
-                                                    <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div><br>";
+                                                    <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div>";
                                                 }
                                             }
                                         ?>
