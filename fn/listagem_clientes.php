@@ -59,7 +59,7 @@
                                         echo "<td>{$linha['cli_cpf']}</td>";
                                         echo "<td>{$linha['cli_fone']}</td>";
                                         echo "<td>{$linha['cli_data_nasc']}</td>";
-                                        echo "<td><a class='btn btn-danger' role='button' href='action_exclui_cliente.php?id={$linha['cli_id']}'>Excluir cadastro</a></th>";
+                                        echo "<td><a class='btn btn-danger' role='button' href='action_exclui_cliente.php?id={$linha['cli_id']}'>Excluir</a></th>";
                                         echo "</tr>";
                                     }
                                     echo "</table>";
