@@ -23,44 +23,6 @@
                     <h3 class="display-6 fw-bold pb-md-4">Produtos&nbsp;<span class="underline">comprados:</span></h3>
                 </div>
             </div>
-            <div class="row gy-4 gy-md-0">
-                <div class="col-md-6 col-xl-12 d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                    <div>
-                        <section class="py-4 py-xl-5">
-                            <div class="container">
-                                <div class="bg-dark border rounded border-0 border-dark overflow-hidden">
-                                    <div class="row g-0">
-                                    <div class="col-md-6 col-xl-12 d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                                            <section class="py-4 py-xl-5">
-                                                <div class="container h-100">
-                                                    <div class="text-white bg-primary border rounded border-0 p-4 py-5">
-                                                        <div class="row h-100">
-                                                            <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
-                                                                <div>
-                                                                    <h1 class="text-uppercase fw-bold text-white mb-3">compra finalizada!</h1>
-                                                                    <p class="mb-4">Sua compra foi finalizada com sucesso e provavelmente não chegará nunca, afinal de contas, essa loja não existe de verdade!</p><a class="btn btn-light fs-5 py-2 px-4" role="button" href="fim_compra.php">Ir para a página inicial</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg" /></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-                                            <div>
-                                                <section class="py-4 py-xl-5">
-                                                    <div class="container">
-                                                        <div class="bg-dark border rounded border-0 border-dark overflow-hidden"></div>
-                                                    </div>
-                                                </section>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <section></section>
@@ -69,9 +31,9 @@
             <div class="bg-primary border rounded border-0 border-primary overflow-hidden">
                 <div class="row g-0">
                     <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <div class="text-white p-4 p-md-5">
-                            <h2 class="fw-bold text-white mb-3">Não possuímos todos os produtos, mas temos a melhor experiência</h2>
-                            <p class="mb-4">Apesar de não oferecermos um catálogo mais extenso, provemos um serviço de qualidade inigualável. Caso queira algum produto específico, aguarde para que nós possamos adicionar ao nosso repertório.</p>
+                        <div>
+                            <h1 class="text-uppercase fw-bold text-white mb-3">compra finalizada!</h1>
+                            <p class="mb-4">Sua compra foi finalizada com sucesso e provavelmente não chegará nunca, afinal de contas, essa loja não existe de verdade!</p><a class="btn btn-light fs-5 py-2 px-4" role="button" href="fim_compra.php">Ir para a página inicial</a>
                         </div>
                     </div>
                     <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg"></div>

@@ -12,7 +12,7 @@
     }
     
     $exclui=$conecta->prepare('DELETE FROM `tab_carrinho` WHERE `tab_carrinho`.`cli_id` = :codigo');
-    $exclui->bindValue(':codigo', $codigo);
+    $exclui->bindValue(':codigo', $cli_id);
     $exclui->execute();
     
     header('Location: fim_compra.php');
