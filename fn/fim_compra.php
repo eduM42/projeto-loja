@@ -30,12 +30,10 @@
         <div class="container">
             <div class="bg-primary border rounded border-0 border-primary overflow-hidden">
                 <div class="row g-0">
-                    <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <div>
-                            <h1 class="text-uppercase fw-bold text-white mb-3">compra finalizada!</h1>
-                            <p class="mb-4">Sua compra foi finalizada com sucesso e provavelmente não chegará nunca, afinal de contas, essa loja não existe de verdade!</p><a class="btn btn-light fs-5 py-2 px-4" role="button" href="fim_compra.php">Ir para a página inicial</a>
+                    <div class="text-white p-4 p-md-5">
+                            <h2 class="fw-bold text-white mb-3">COMPRA FINALIZDA!</h2>
+                            <p class="mb-4">Sua compra foi finalizada com sucesso e provavelmente não chegará nunca, afinal de contas, essa loja não existe de verdade!</p><a class="btn btn-success" role="button">IR PARA A PÁGINA INICIAL</a>
                         </div>
-                    </div>
                     <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg"></div>
                 </div>
             </div>
