@@ -31,35 +31,38 @@
                                         <div class="col-md-6">
                                         <?php
                                             $usuario = $_COOKIE['email'];
+                                            
 
                                             $consulta = $conecta -> prepare("SELECT * FROM tab_clientes WHERE cli_email = '".$usuario."'");
                                             $consulta -> execute();
                                             while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
                                                 $cli_id = $linha['cli_id'];
-                                            }
-                                            $consulta = $conecta -> prepare("SELECT * FROM tab_carrinho WHERE cli_id = '".$cli_id."'");
-                                            $consulta -> execute();
-                                            while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
-                                                $prod_id = $linha['prod_id'];
-                                            }
+                                            //}
+                                                $consulta = $conecta -> prepare("SELECT * FROM tab_carrinho WHERE cli_id = '".$cli_id."'");
+                                                $consulta -> execute();
+                                                while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                                                    $prod_id = $linha['prod_id'];
+                                                }
 
-                                            $consulta = $conecta -> prepare("SELECT * FROM tab_produtos WHERE prod_id = '".$prod_id."'");
-                                            $consulta -> execute();
-                                            while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
-                                                $prod_nome = $linha['prod_nome'];
-                                                $prod_desc = $linha['prod_desc'];
-                                                $prod_img = $linha['prod_img'];
-                                            }
+                                                $consulta = $conecta -> prepare("SELECT * FROM tab_produtos WHERE prod_id = '".$prod_id."'");
+                                                $consulta -> execute();
+                                                while($linha  = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                                                    $prod_nome = $linha['prod_nome'];
+                                                    $prod_desc = $linha['prod_desc'];
+                                                    $prod_img = $linha['prod_img'];
+                                                    $prod_valor = $linha['prod_valor'];
+                                                }
 
-                                            if($prod_desc != NULL){
-                                                echo "<div class='text-white p-4 p-md-5'>
-                                                        <h2 class='fw-bold text-white mb-3'>$prod_nome</h2>
-                                                        <p class='mb-4'>$prod_desc</p>
-                                                        <h1 style='color: rgb(0,200,0);'>R$ valor</h1>
-                                                        <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php'>CONFIRMAR COMPRA</a></div>
+                                                if($prod_desc != NULL){
+                                                    echo "<div class='text-white p-4 p-md-5'>
+                                                            <h2 class='fw-bold text-white mb-3'>$prod_nome</h2>
+                                                            <p class='mb-4'>$prod_desc</p>
+                                                            <h1 style='color: rgb(0,200,0);'>R$ $prod_valor</h1>
+                                                            <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php'>CONFIRMAR COMPRA</a></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div>";
+                                                    <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div><br>";
+                                                }
                                             }
                                         ?>
                                     </div>
