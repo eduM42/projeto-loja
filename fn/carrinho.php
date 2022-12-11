@@ -45,15 +45,16 @@
                                                     $prod_desc = $linha['prod_desc'];
                                                     $prod_img = $linha['prod_img'];
                                                  }
-
-                                                echo "<div class='text-white p-4 p-md-5'>
-                                                        <h2 class='fw-bold text-white mb-3'>$prod_nome</h2>
-                                                        <p class='mb-4'>$prod_desc</p>
-                                                        <h1 style='color: rgb(0,200,0);'>R$ valor</h1>
-                                                        <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php'>CONFIRMAR COMPRA</a></div>
+                                                if($prod_desc != NULL){
+                                                    echo "<div class='text-white p-4 p-md-5'>
+                                                            <h2 class='fw-bold text-white mb-3'>$prod_nome</h2>
+                                                            <p class='mb-4'>$prod_desc</p>
+                                                            <h1 style='color: rgb(0,200,0);'>R$ valor</h1>
+                                                            <div class='my-3'><a class='btn btn-secondary btn-lg me-2' role='button' href='/confirma.php'>CONFIRMAR COMPRA</a></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div>";
+                                                    <div class='col-md-6 order-first order-md-last' style='min-height: 250px;'><img class='w-100 h-100 fit-cover' src='assets/img/$prod_img'></div>";
+                                                }
                                             ?>
                                     </div>
                                 </div>
@@ -75,7 +76,7 @@
                             <p class="mb-4">Apesar de não oferecermos um catálogo mais extenso, provemos um serviço de qualidade inigualável. Caso queira algum produto específico, aguarde para que nós possamos adicionar ao nosso repertório.</p>
                         </div>
                     </div>
-                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="assets/img/illustrations/web-development.svg"></div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img class="w-100 h-100 fit-contain pt-5 pt-md-0" src="illustrations/web-development.svg"></div>
                 </div>
             </div>
         </div>

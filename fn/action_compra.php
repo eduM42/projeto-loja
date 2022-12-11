@@ -18,5 +18,5 @@
     $sql->bindValue(':cart_qnt',$qnt);
     $sql->execute();
     
-    //header('Location: index.php');
+    header('Location: index.php');
 ?>
