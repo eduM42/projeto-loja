@@ -1,6 +1,9 @@
 <?php
   require_once 'cabecalho.php';
   require_once 'connect.php';
+  if($_COOKIE['login'] == FALSE){
+    header('Location: index.php');
+}
 ?>
 
 <!doctype html>
@@ -81,18 +84,18 @@
     
 <div class="container">
   <main>
-    <div class="py-5 text-center">
+    <div class="py-5 text-center" style="margin-top: 20px">
       <h2>Formulário de Checkout</h2>
       <p class="lead">Finalize sua compra aqui.</p>
     </div>
       
-    <div class="row g-5">
+    <!-- <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Seu carrinho</span>
           <span class="badge bg-primary rounded-pill">3</span>
         </h4>
-        <ul class='list-group mb-3'>
+        <ul class='list-group mb-3'> -->
 
         <?php
             $consulta = $conecta -> prepare('SELECT * FROM tab_clientes WHERE cli_email = "'.$_COOKIE['email'].'"');
@@ -100,37 +103,44 @@
             while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
               $cli_id = $linha['cli_id'];
             }
-
-            $get_prod = $c_prod -> prepare('SELECT * FROM tab_carrinho WHERE cli_id = "'.$cli_id.'"');
-            $get_prod -> execute();
-            while($linha_p  = $get_prod -> fetch(PDO::FETCH_ASSOC)){
-              $prod_id = $linha_p['prod_id'];
-              $prod_id = $linha_p['cart_qnt'];
-
-              $consulta = $conecta -> prepare('SELECT * FROM tab_produtos WHERE prod_id = "'.$prod_id.'"');
-              $consulta -> execute();
-              while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
-                $prod_nome = $linha['prod_nome'];
-                $prod_desc = $linha['prod_desc'];
-                $prod_valor = $linha['prod_valor'];
-                $total = $total + $prod_valor;
-                echo "<li class='list-group-item d-flex justify-content-between lh-sm'>
-                        <div>
-                        <h6 class='my-0'>$prod_nome</h6>
-                        <small class='text-muted'>$prod_desc</small>
-                        </div>
-                        <span class='text-muted'>$$prod_valor</span>
-                    </li>";
-              }
+            $i = 0;
+            $consulta = $conecta -> prepare('SELECT * FROM tab_carrinho WHERE cli_id = "'.$cli_id.'"');
+            $consulta -> execute();
+            while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
+              $prod_id[$i] = $linha['prod_id'];
+              $i++;
+              
             }
+            echo "<div class='row g-5'>
+            <div class='col-md-5 col-lg-4 order-md-last'>
+              <h4 class='d-flex justify-content-between align-items-center mb-3'>
+                <span class='text-primary'>Seu carrinho</span>
+                <span class='badge bg-primary rounded-pill'>$i</span>
+              </h4>
+              <ul class='list-group mb-3'>";
+
+            foreach ($prod_id as $n) {
+                $consulta = $conecta -> prepare('SELECT * FROM tab_produtos WHERE prod_id = "'.$n.'"');
+                $consulta -> execute();
+                while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                    $prod_nome = $linha['prod_nome'];
+                    $prod_desc = $linha['prod_desc'];
+                    $prod_valor = $linha['prod_valor'];
+                    $total = $total + $prod_valor;
+                    echo "<li class='list-group-item d-flex justify-content-between lh-sm'>
+                            <div>
+                            <h6 class='my-0'>$prod_nome</h6>
+                            <small class='text-muted'>$prod_desc</small>
+                            </div>
+                            <span class='text-muted'><bold>$$prod_valor</bold></span>
+                        </li>";
+                }
+            }
+            
             
           ?>
               <li class='list-group-item d-flex justify-content-between bg-light'>
-                <div class='text-success'>
-                  <h6 class='my-0'>Código promocional</h6>
-                  <small>EXAMPLECODE</small>
-                </div>
-                <span class='text-success'>−$5</span>
+                
               </li>
               <?php
               echo "<li class='list-group-item d-flex justify-content-between'>
@@ -140,19 +150,15 @@
                     </ul>";
             ?>
           <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Código promocional</h6>
-              <small>EXAMPLECODE</small>
-            </div>
-            <span class="text-success">−$5</span>
+            
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (R$)</span>
-            <strong>$20</strong>
+            <?php echo "<strong>$$total</strong>";?>
           </li>
         </ul>
 
-        <form class="card p-2">
+        <form action="fim_compra.php" class="card p-2">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Código promocional">
             <button type="submit" class="btn btn-secondary">Solicitar</button>
@@ -310,7 +316,7 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar para checkout</button>
+          <?php echo "<a class='w-100 btn btn-primary btn-lg' role='button' href='confirma.php?email=".$_COOKIE['email']."'>Continuar para checkout</a>";?>
         </form>
       </div>
     </div>

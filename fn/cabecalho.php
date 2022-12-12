@@ -44,7 +44,7 @@
                     <li class="nav-item"></li>
                 </ul>
                 <a class="btn btn-danger shadow" role="button" href="sair.php" style="margin: 0px;margin-right: 10px;">Sair</a>
-                <a class="btn btn-primary shadow" role="button" href="carrinho.php">Carrinho de compras</a>
+                <a class="btn btn-primary shadow" role="button" href="checkout.php">Carrinho de compras</a>
             </div>
         </div>
     </nav>
