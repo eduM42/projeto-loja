@@ -1,5 +1,6 @@
 <?php
   require_once 'cabecalho.php';
+  require_once 'connect.php';
 ?>
 
 <!doctype html>
@@ -84,35 +85,60 @@
       <h2>Formulário de Checkout</h2>
       <p class="lead">Finalize sua compra aqui.</p>
     </div>
-
+      
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Seu carrinho</span>
           <span class="badge bg-primary rounded-pill">3</span>
         </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Nome do produto</h6>
-              <small class="text-muted">Breve descrição</small>
-            </div>
-            <span class="text-muted">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Segundo item</h6>
-              <small class="text-muted">Breve descrição</small>
-            </div>
-            <span class="text-muted">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Terceiro item</h6>
-              <small class="text-muted">Breve descrição</small>
-            </div>
-            <span class="text-muted">$5</span>
-          </li>
+        <ul class='list-group mb-3'>
+
+        <?php
+            $consulta = $conecta -> prepare('SELECT * FROM tab_clientes WHERE cli_email = "'.$_COOKIE['email'].'"');
+            $consulta -> execute();
+            while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
+              $cli_id = $linha['cli_id'];
+            }
+
+            $get_prod = $c_prod -> prepare('SELECT * FROM tab_carrinho WHERE cli_id = "'.$cli_id.'"');
+            $get_prod -> execute();
+            while($linha_p  = $get_prod -> fetch(PDO::FETCH_ASSOC)){
+              $prod_id = $linha_p['prod_id'];
+              $prod_id = $linha_p['cart_qnt'];
+
+              $consulta = $conecta -> prepare('SELECT * FROM tab_produtos WHERE prod_id = "'.$prod_id.'"');
+              $consulta -> execute();
+              while($linha = $consulta -> fetch(PDO::FETCH_ASSOC)){
+                $prod_nome = $linha['prod_nome'];
+                $prod_desc = $linha['prod_desc'];
+                $prod_valor = $linha['prod_valor'];
+                $total = $total + $prod_valor;
+                echo "<li class='list-group-item d-flex justify-content-between lh-sm'>
+                        <div>
+                        <h6 class='my-0'>$prod_nome</h6>
+                        <small class='text-muted'>$prod_desc</small>
+                        </div>
+                        <span class='text-muted'>$$prod_valor</span>
+                    </li>";
+              }
+            }
+            
+          ?>
+              <li class='list-group-item d-flex justify-content-between bg-light'>
+                <div class='text-success'>
+                  <h6 class='my-0'>Código promocional</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class='text-success'>−$5</span>
+              </li>
+              <?php
+              echo "<li class='list-group-item d-flex justify-content-between'>
+                        <span>Total (R$)</span>
+                        <strong>$$total</strong>
+                    </li>
+                    </ul>";
+            ?>
           <li class="list-group-item d-flex justify-content-between bg-light">
             <div class="text-success">
               <h6 class="my-0">Código promocional</h6>
